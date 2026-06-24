@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { MessageCircle, Camera } from "lucide-react";
-import { motion } from "framer-motion";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -102,28 +101,13 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6"
-          >
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
             You Inspire, We Create
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl sm:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto"
-          >
+          </h1>
+          <p className="text-xl sm:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto">
             Luxury beauty services for your most special moments
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
               className="px-8 py-4 bg-gold text-black rounded-full font-semibold hover:bg-gold-light transition-all transform hover:scale-105 shadow-lg"
@@ -136,39 +120,21 @@ export default function Home() {
             >
               View Services
             </a>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-black-light">
         <div className="max-w-7xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl font-bold text-center text-white mb-4"
-          >
-            Our Services
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center text-gray-400 mb-12 max-w-2xl mx-auto"
-          >
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-white mb-4">Our Services</h2>
+          <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
             From bridal elegance to everyday glamour, we offer a full range of beauty services
-          </motion.p>
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-black border border-gold/30 p-6 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all transform hover:-translate-y-1 cursor-pointer"
               >
                 <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
@@ -178,7 +144,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{service}</h3>
                 <p className="text-gray-400">Professional service tailored to your unique beauty needs</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -187,13 +153,7 @@ export default function Home() {
       {/* Gallery Section */}
       <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
+          <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Our Work</h2>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               A glimpse into our portfolio of beautiful transformations
@@ -207,22 +167,18 @@ export default function Home() {
               <Camera size={24} />
               Follow us on Instagram
             </a>
-          </motion.div>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <motion.div
+              <div
                 key={item}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: item * 0.1 }}
                 className="aspect-square bg-linear-to-br from-gold-dark to-gold rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer flex items-center justify-center relative group"
               >
                 <span className="text-black font-semibold text-lg">Gallery {item}</span>
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl flex items-center justify-center">
                   <Camera size={32} className="text-white" />
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -231,32 +187,14 @@ export default function Home() {
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-black-light">
         <div className="max-w-7xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl font-bold text-center text-white mb-4"
-          >
-            What Our Clients Say
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center text-gray-400 mb-12 max-w-2xl mx-auto"
-          >
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-white mb-4">What Our Clients Say</h2>
+          <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
             Real stories from our beautiful clients
-          </motion.p>
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="bg-black border border-gold/30 p-8 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all"
               >
                 <div className="flex mb-4">
@@ -268,7 +206,7 @@ export default function Home() {
                 </div>
                 <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.text}&rdquo;</p>
                 <p className="font-semibold text-white">— {testimonial.name}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -277,31 +215,11 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-3xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl font-bold text-center text-white mb-4"
-          >
-            Book Your Appointment
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center text-gray-400 mb-12"
-          >
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-white mb-4">Book Your Appointment</h2>
+          <p className="text-center text-gray-400 mb-12">
             Ready to transform your look? Fill out the form below to book your appointment
-          </motion.p>
-          <motion.form
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-black-light border border-gold/30 p-8 rounded-2xl shadow-xl"
-          >
+          </p>
+          <form className="bg-black-light border border-gold/30 p-8 rounded-2xl shadow-xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label className="block text-white font-semibold mb-2">Full Name *</label>
@@ -380,7 +298,7 @@ export default function Home() {
             >
               Book Appointment
             </button>
-          </motion.form>
+          </form>
         </div>
       </section>
 
