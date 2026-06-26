@@ -1,10 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MessageCircle, Camera } from "lucide-react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const heroImages = [
+    "/WhatsApp Image 2026-06-24 at 09.41.02.jpeg",
+    "/WhatsApp Image 2026-06-24 at 09.41.32 (1).jpeg",
+    "/WhatsApp Image 2026-06-24 at 09.41.37 (1).jpeg",
+    "/WhatsApp Image 2026-06-24 at 09.41.37.jpeg"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   const services = [
     "Bridal Makeup",
@@ -99,8 +114,25 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
-        <div className="max-w-7xl mx-auto text-center">
+      <section id="home" className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative min-h-[600px]">
+        <div className="absolute inset-0 z-0">
+          {heroImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img
+                src={image}
+                alt={`Hero slide ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/60" />
+            </div>
+          ))}
+        </div>
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
             You Inspire, We Create
           </h1>
