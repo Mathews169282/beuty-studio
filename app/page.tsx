@@ -6,6 +6,7 @@ import { MessageCircle, Camera } from "lucide-react";
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const heroImages = [
     "/WhatsApp Image 2026-06-24 at 09.41.02.jpeg",
@@ -72,7 +73,8 @@ export default function Home() {
             <div className="hidden md:flex space-x-8">
               <a href="#home" className="text-white hover:text-gold transition-colors">Home</a>
               <a href="#services" className="text-white hover:text-gold transition-colors">Services</a>
-              <a href="#gallery" className="text-white hover:text-gold transition-colors">Gallery</a>
+              <a href="#pricing" className="text-white hover:text-gold transition-colors">Pricing</a>
+              <a href="/gallery" className="text-white hover:text-gold transition-colors">Gallery</a>
               <a href="#testimonials" className="text-white hover:text-gold transition-colors">Testimonials</a>
               <a href="#contact" className="text-white hover:text-gold transition-colors">Contact</a>
             </div>
@@ -105,7 +107,8 @@ export default function Home() {
             <div className="px-4 py-2 space-y-2">
               <a href="#home" className="block py-2 text-white hover:text-gold" onClick={() => setMobileMenuOpen(false)}>Home</a>
               <a href="#services" className="block py-2 text-white hover:text-gold" onClick={() => setMobileMenuOpen(false)}>Services</a>
-              <a href="#gallery" className="block py-2 text-white hover:text-gold" onClick={() => setMobileMenuOpen(false)}>Gallery</a>
+              <a href="#pricing" className="block py-2 text-white hover:text-gold" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
+              <a href="/gallery" className="block py-2 text-white hover:text-gold" onClick={() => setMobileMenuOpen(false)}>Gallery</a>
               <a href="#testimonials" className="block py-2 text-white hover:text-gold" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
               <a href="#contact" className="block py-2 text-white hover:text-gold" onClick={() => setMobileMenuOpen(false)}>Contact</a>
             </div>
@@ -182,6 +185,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-black-light">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-white mb-4">Our Pricing</h2>
+          <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+            Transparent pricing for all our beauty services
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-black border border-gold/30 p-8 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all">
+              <h3 className="text-2xl font-bold text-gold mb-4">Makeup Services</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex justify-between"><span>Bridal Makeup</span><span className="text-white font-semibold">KES 15,000</span></li>
+                <li className="flex justify-between"><span>Traditional Wedding Makeup</span><span className="text-white font-semibold">KES 12,000</span></li>
+                <li className="flex justify-between"><span>Graduation Makeup</span><span className="text-white font-semibold">KES 5,000</span></li>
+                <li className="flex justify-between"><span>Birthday Makeup</span><span className="text-white font-semibold">KES 4,000</span></li>
+                <li className="flex justify-between"><span>Soft Glam Makeup</span><span className="text-white font-semibold">KES 3,500</span></li>
+                <li className="flex justify-between"><span>Full Glam Makeup</span><span className="text-white font-semibold">KES 4,500</span></li>
+              </ul>
+            </div>
+            <div className="bg-black border border-gold/30 p-8 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all">
+              <h3 className="text-2xl font-bold text-gold mb-4">Hair Services</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex justify-between"><span>Wig Installations</span><span className="text-white font-semibold">KES 3,000</span></li>
+                <li className="flex justify-between"><span>Sew-In Weaves</span><span className="text-white font-semibold">KES 4,000</span></li>
+                <li className="flex justify-between"><span>Bridal Hair Styling</span><span className="text-white font-semibold">KES 5,000</span></li>
+                <li className="flex justify-between"><span>Natural Hair Styling</span><span className="text-white font-semibold">KES 2,500</span></li>
+                <li className="flex justify-between"><span>Ponytails</span><span className="text-white font-semibold">KES 2,000</span></li>
+                <li className="flex justify-between"><span>Updos</span><span className="text-white font-semibold">KES 3,500</span></li>
+              </ul>
+            </div>
+            <div className="bg-black border border-gold/30 p-8 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all">
+              <h3 className="text-2xl font-bold text-gold mb-4">Braided Styles</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex justify-between"><span>Box Braids</span><span className="text-white font-semibold">KES 3,500</span></li>
+                <li className="flex justify-between"><span>Cornrows</span><span className="text-white font-semibold">KES 2,000</span></li>
+                <li className="flex justify-between"><span>Twists</span><span className="text-white font-semibold">KES 3,000</span></li>
+                <li className="flex justify-between"><span>Feed-in Braids</span><span className="text-white font-semibold">KES 4,000</span></li>
+                <li className="flex justify-between"><span>Knotless Braids</span><span className="text-white font-semibold">KES 4,500</span></li>
+                <li className="flex justify-between"><span>Custom Braids</span><span className="text-white font-semibold">KES 5,000</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Gallery Section */}
       <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto">
@@ -201,7 +249,10 @@ export default function Home() {
             </a>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div className="aspect-square rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer relative group overflow-hidden">
+            <div 
+              className="aspect-square rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer relative group overflow-hidden"
+              onClick={() => setSelectedImage("/WhatsApp Image 2026-06-24 at 09.41.02.jpeg")}
+            >
               <img
                 src="/WhatsApp Image 2026-06-24 at 09.41.02.jpeg"
                 alt="Beauty work 1"
@@ -211,7 +262,10 @@ export default function Home() {
                 <Camera size={32} className="text-white" />
               </div>
             </div>
-            <div className="aspect-square rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer relative group overflow-hidden">
+            <div 
+              className="aspect-square rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer relative group overflow-hidden"
+              onClick={() => setSelectedImage("/WhatsApp Image 2026-06-24 at 09.41.32 (1).jpeg")}
+            >
               <img
                 src="/WhatsApp Image 2026-06-24 at 09.41.32 (1).jpeg"
                 alt="Beauty work 2"
@@ -221,7 +275,10 @@ export default function Home() {
                 <Camera size={32} className="text-white" />
               </div>
             </div>
-            <div className="aspect-square rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer relative group overflow-hidden">
+            <div 
+              className="aspect-square rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer relative group overflow-hidden"
+              onClick={() => setSelectedImage("/WhatsApp Image 2026-06-24 at 09.41.37 (1).jpeg")}
+            >
               <img
                 src="/WhatsApp Image 2026-06-24 at 09.41.37 (1).jpeg"
                 alt="Beauty work 3"
@@ -231,7 +288,10 @@ export default function Home() {
                 <Camera size={32} className="text-white" />
               </div>
             </div>
-            <div className="aspect-square rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer relative group overflow-hidden">
+            <div 
+              className="aspect-square rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer relative group overflow-hidden"
+              onClick={() => setSelectedImage("/WhatsApp Image 2026-06-24 at 09.41.37.jpeg")}
+            >
               <img
                 src="/WhatsApp Image 2026-06-24 at 09.41.37.jpeg"
                 alt="Beauty work 4"
@@ -425,6 +485,27 @@ export default function Home() {
       >
         <MessageCircle size={32} />
       </a>
+
+      {/* Image Lightbox */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <img
+            src={selectedImage}
+            alt="Gallery image"
+            className="max-w-full max-h-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button
+            className="absolute top-4 right-4 text-white text-4xl hover:text-gold transition-colors"
+            onClick={() => setSelectedImage(null)}
+          >
+            ×
+          </button>
+        </div>
+      )}
     </div>
   );
 }
