@@ -280,7 +280,11 @@ export default function Home() {
           <p className="text-center text-gray-400 mb-12">
             Ready to transform your look? Fill out the form below to book your appointment
           </p>
-          <form className="bg-black-light border border-gold/30 p-8 rounded-2xl shadow-xl">
+          <form 
+            action="https://formsubmit.co/delipherzulu@gmail.com" 
+            method="POST"
+            className="bg-black-light border border-gold/30 p-8 rounded-2xl shadow-xl"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label className="block text-white font-semibold mb-2">Full Name *</label>
@@ -401,7 +405,7 @@ export default function Home() {
               <ul className="space-y-2 text-gray-400">
                 <li>📍 123 Beauty Lane</li>
                 <li>📞 +254 704 689565</li>
-                <li>✉️ hello@delipherartistry.com</li>
+                <li>✉️ delipherzulu@gmail.com</li>
               </ul>
             </div>
           </div>
