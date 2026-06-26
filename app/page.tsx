@@ -169,17 +169,46 @@ export default function Home() {
             </a>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <div
-                key={item}
-                className="aspect-square bg-linear-to-br from-gold-dark to-gold rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer flex items-center justify-center relative group"
-              >
-                <span className="text-black font-semibold text-lg">Gallery {item}</span>
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl flex items-center justify-center">
-                  <Camera size={32} className="text-white" />
-                </div>
+            <div className="aspect-square rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer relative group overflow-hidden">
+              <img
+                src="/WhatsApp Image 2026-06-24 at 09.41.02.jpeg"
+                alt="Beauty work 1"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl flex items-center justify-center">
+                <Camera size={32} className="text-white" />
               </div>
-            ))}
+            </div>
+            <div className="aspect-square rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer relative group overflow-hidden">
+              <img
+                src="/WhatsApp Image 2026-06-24 at 09.41.32 (1).jpeg"
+                alt="Beauty work 2"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl flex items-center justify-center">
+                <Camera size={32} className="text-white" />
+              </div>
+            </div>
+            <div className="aspect-square rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer relative group overflow-hidden">
+              <img
+                src="/WhatsApp Image 2026-06-24 at 09.41.37 (1).jpeg"
+                alt="Beauty work 3"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl flex items-center justify-center">
+                <Camera size={32} className="text-white" />
+              </div>
+            </div>
+            <div className="aspect-square rounded-2xl shadow-md hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer relative group overflow-hidden">
+              <img
+                src="/WhatsApp Image 2026-06-24 at 09.41.37.jpeg"
+                alt="Beauty work 4"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl flex items-center justify-center">
+                <Camera size={32} className="text-white" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
