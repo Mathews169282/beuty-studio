@@ -192,39 +192,50 @@ export default function Home() {
           <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
             Transparent pricing for all our beauty services
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-black border border-gold/30 p-8 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all">
-              <h3 className="text-2xl font-bold text-gold mb-4">Makeup Services</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex justify-between"><span>Bridal Makeup</span><span className="text-white font-semibold">KES 15,000</span></li>
-                <li className="flex justify-between"><span>Traditional Wedding Makeup</span><span className="text-white font-semibold">KES 12,000</span></li>
-                <li className="flex justify-between"><span>Graduation Makeup</span><span className="text-white font-semibold">KES 5,000</span></li>
-                <li className="flex justify-between"><span>Birthday Makeup</span><span className="text-white font-semibold">KES 4,000</span></li>
-                <li className="flex justify-between"><span>Soft Glam Makeup</span><span className="text-white font-semibold">KES 3,500</span></li>
-                <li className="flex justify-between"><span>Full Glam Makeup</span><span className="text-white font-semibold">KES 4,500</span></li>
+              <h3 className="text-2xl font-bold text-gold mb-6">💄 Makeup Services</h3>
+              <ul className="space-y-4 text-gray-300">
+                <li className="flex justify-between py-2 border-b border-gray-800">
+                  <span>Full Glam with Lashes</span>
+                  <span className="text-white font-bold">KES 4,000</span>
+                </li>
+                <li className="flex justify-between py-2 border-b border-gray-800">
+                  <span>House Call</span>
+                  <span className="text-white font-bold">KES 5,500</span>
+                </li>
+                <li className="flex justify-between py-2 border-b border-gray-800">
+                  <span>Lashes Only</span>
+                  <span className="text-white font-bold">KES 1,000</span>
+                </li>
               </ul>
+              <p className="text-gray-500 text-sm mt-4 italic">* Client is responsible for transport for house calls</p>
             </div>
             <div className="bg-black border border-gold/30 p-8 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all">
-              <h3 className="text-2xl font-bold text-gold mb-4">Hair Services</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex justify-between"><span>Wig Installations</span><span className="text-white font-semibold">KES 3,000</span></li>
-                <li className="flex justify-between"><span>Sew-In Weaves</span><span className="text-white font-semibold">KES 4,000</span></li>
-                <li className="flex justify-between"><span>Bridal Hair Styling</span><span className="text-white font-semibold">KES 5,000</span></li>
-                <li className="flex justify-between"><span>Natural Hair Styling</span><span className="text-white font-semibold">KES 2,500</span></li>
-                <li className="flex justify-between"><span>Ponytails</span><span className="text-white font-semibold">KES 2,000</span></li>
-                <li className="flex justify-between"><span>Updos</span><span className="text-white font-semibold">KES 3,500</span></li>
+              <h3 className="text-2xl font-bold text-gold mb-6">👰 Bridal Packages</h3>
+              <ul className="space-y-4 text-gray-300">
+                <li className="flex justify-between py-2 border-b border-gray-800">
+                  <span>Bride</span>
+                  <span className="text-white font-bold">KES 10,000</span>
+                </li>
+                <li className="flex justify-between py-2 border-b border-gray-800">
+                  <span>Bridal Trial</span>
+                  <span className="text-white font-bold">KES 4,500</span>
+                </li>
+                <li className="flex justify-between py-2 border-b border-gray-800">
+                  <span>Bridesmaids</span>
+                  <span className="text-white font-bold">KES 4,000</span>
+                </li>
+                <li className="flex justify-between py-2 border-b border-gray-800">
+                  <span>Bride&apos;s Mum</span>
+                  <span className="text-white font-bold">KES 3,500</span>
+                </li>
+                <li className="flex justify-between py-2 border-b border-gray-800">
+                  <span>Flower Girl</span>
+                  <span className="text-white font-bold">KES 2,000</span>
+                </li>
               </ul>
-            </div>
-            <div className="bg-black border border-gold/30 p-8 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all">
-              <h3 className="text-2xl font-bold text-gold mb-4">Braided Styles</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex justify-between"><span>Box Braids</span><span className="text-white font-semibold">KES 3,500</span></li>
-                <li className="flex justify-between"><span>Cornrows</span><span className="text-white font-semibold">KES 2,000</span></li>
-                <li className="flex justify-between"><span>Twists</span><span className="text-white font-semibold">KES 3,000</span></li>
-                <li className="flex justify-between"><span>Feed-in Braids</span><span className="text-white font-semibold">KES 4,000</span></li>
-                <li className="flex justify-between"><span>Knotless Braids</span><span className="text-white font-semibold">KES 4,500</span></li>
-                <li className="flex justify-between"><span>Custom Braids</span><span className="text-white font-semibold">KES 5,000</span></li>
-              </ul>
+              <p className="text-gray-500 text-sm mt-4 italic">* Client is responsible for transport</p>
             </div>
           </div>
         </div>
