@@ -60,15 +60,21 @@ export default function Home() {
     <div className="min-h-screen bg-black">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gold/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="shrink-0 flex items-center">
-              <img
-                src="/WhatsApp Image 2026-06-23 at 16.33.45.jpeg"
-                alt="DELIPHER ARTISTRY Logo"
-                className="h-30 w-auto mr-3"
-              />
-              <h1 className="text-2xl font-bold text-gold">DELIPHER ARTISTRY</h1>
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="shrink-0">
+              <div className="flex items-center">
+                <img
+                  src="/WhatsApp Image 2026-06-23 at 16.33.45.jpeg"
+                  alt="DELIPHER ARTISTRY Logo"
+                  className="h-20 w-auto mr-3"
+                />
+                <h1 className="text-2xl font-bold text-gold">DELIPHER ARTISTRY</h1>
+              </div>
+              <div className="flex items-center gap-4 mt-1 text-sm text-gray-400">
+                <a href="tel:+254704689565" className="hover:text-gold transition-colors">📞 +254 704 689565</a>
+                <a href="mailto:delipherzulu@gmail.com" className="hover:text-gold transition-colors">✉️ delipherzulu@gmail.com</a>
+              </div>
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#home" className="text-white hover:text-gold transition-colors">Home</a>
