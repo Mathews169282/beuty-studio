@@ -123,7 +123,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-40 pb-16 px-4 sm:px-6 lg:px-8 relative min-h-[600px]">
+      <section id="home" className="pt-32 md:pt-40 pb-16 px-4 sm:px-6 lg:px-8 relative min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
           {heroImages.map((image, index) => (
             <div
